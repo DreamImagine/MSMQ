@@ -9,9 +9,14 @@ namespace MSMQ
 	{
 		public void Init()
 		{
-			Test1();
+			//Test1();
 
 		}
+
+
+
+
+
 
 		public void Test1()
 		{

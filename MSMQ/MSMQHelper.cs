@@ -27,5 +27,33 @@ namespace MSMQ
                 return new MessageQueue(queuePaht);
             }
         }
+
+
+
+	    public void Init()
+	    {
+		    SendYuanChen();
+	    }
+
+
+		public void SendYuanChen()
+		{
+			try
+			{
+				string s = "sssssssss";
+				var msg = new Message();
+				msg.Body = s;
+				msg.Formatter = new XmlMessageFormatter(new Type[] { typeof(string) });
+				var mq = new MessageQueue(@"FormatName:Direct=TCP:112.74.14.58\private$\queuedemo");
+				mq.Send(msg);
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+		}
+
+
+		 
     }
 }

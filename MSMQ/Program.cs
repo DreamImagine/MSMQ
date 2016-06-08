@@ -67,6 +67,9 @@ namespace MSMQ
 			netMqHelper.Init();
 
 
+			MSMQHelper  msmqHelper=new MSMQHelper();
+			msmqHelper.Init();
+
 			#region 升级
 
 			//SendMessage(new Book() {
@@ -390,7 +393,7 @@ namespace MSMQ
 				//	MessageQueue.Create(@"FormatName:Direct=TCP:192.168.31.185\\private$\\queue");
 				//}
 
-				MessageQueue rmQ = new MessageQueue(@"FormatName:Direct=TCP:192.168.31.185\\myQueue");
+				MessageQueue rmQ = new MessageQueue(@"FormatName:Direct=TCP:192.168.31.39\\myQueue");
 				//,Direct=TCP:192.168.1.2\\private$\\queue
 
 
