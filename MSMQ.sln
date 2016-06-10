@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSMQ", "MSMQ\MSMQ.csproj", "{3F12DBC4-5A7D-456A-875A-2DF4AE10081C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMSMQ", "SendMSMQ\SendMSMQ.csproj", "{D5B573E0-BE91-4091-93DE-C1AEA596B585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveMSMQ", "ReceiveMSMQ\ReceiveMSMQ.csproj", "{ED9CF464-C174-4A8E-BC69-A7A688FE5B5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3F12DBC4-5A7D-456A-875A-2DF4AE10081C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F12DBC4-5A7D-456A-875A-2DF4AE10081C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F12DBC4-5A7D-456A-875A-2DF4AE10081C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5B573E0-BE91-4091-93DE-C1AEA596B585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5B573E0-BE91-4091-93DE-C1AEA596B585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5B573E0-BE91-4091-93DE-C1AEA596B585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5B573E0-BE91-4091-93DE-C1AEA596B585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9CF464-C174-4A8E-BC69-A7A688FE5B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9CF464-C174-4A8E-BC69-A7A688FE5B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9CF464-C174-4A8E-BC69-A7A688FE5B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9CF464-C174-4A8E-BC69-A7A688FE5B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
