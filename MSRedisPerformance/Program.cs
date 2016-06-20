@@ -5,6 +5,7 @@ using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using StackExchange.Redis;
+using System.Diagnostics;
 
 namespace MSRedisPerformance
 {
@@ -46,6 +47,18 @@ namespace MSRedisPerformance
             Console.WriteLine("发送Redis 消息" + count + "条,花费" + execTime);
 
 
+            //开始计时
+            Stopwatch watch = Stopwatch.StartNew();
+
+            SendRedis(count);
+
+            //计时结束
+            watch.Stop();
+
+            Console.WriteLine("发送Redis 消息" + count + "条,花费" + watch.ElapsedMilliseconds);
+
+
+
 
             Console.Read();
 
@@ -70,8 +83,7 @@ namespace MSRedisPerformance
 
                     myMessage.Body = i.ToString();
                     myMessage.Formatter = new XmlMessageFormatter(new Type[] { typeof(string) });
-
-                    myQueue.Send(myMessage);
+                    myQueue.Send(myMessage);                    
 
                 }
                 catch (ArgumentException e)
