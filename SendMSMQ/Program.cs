@@ -18,7 +18,15 @@ namespace SendMSMQ
             //    SendMessage2("22_"+i);
             //    SendMessage3("33_"+i);
             //}
-            SendMessageBook();
+
+            //SendMessageBook();
+
+            //var sTime = new DateTime(2016, 6, 14);
+
+            //var time=new DateTime(2016, 12, 20);
+
+            //Console.WriteLine((time - sTime).Days);
+            //Console.ReadLine();
         }
 
 

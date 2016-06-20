@@ -25,7 +25,8 @@ namespace ReceiveMSMQ
                 //ReceiveMessage();
                 //ReceiveMessage2();
                 //ReceiveMessage3();
-                ReceiveMessageBook();
+                //ReceiveMessageBook();
+                ReceiveMessageAPIRecord();
                 //取出队列里的消息
                 //MessageBox.Show(MsgQueue.ReceiveMessage());
             }
@@ -180,6 +181,43 @@ namespace ReceiveMSMQ
                     book.BookName,
                     book.BookAuthor,
                     book.BookPrice);
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+            return "";
+        }
+
+
+        public static string ReceiveMessageAPIRecord()
+        {
+            Console.WriteLine("我在执行myQueue");
+
+            //连接到本地队列
+            MessageQueue myQueue = new MessageQueue(".\\private$\\myQueue");
+            myQueue.Formatter = new XmlMessageFormatter(new Type[] { typeof(UserOperateAPIRecord) });
+
+            try
+            {
+                var myMessage = myQueue.Receive();
+
+                myMessage.Formatter = new XmlMessageFormatter(new Type[] { typeof(UserOperateAPIRecord) });
+
+                var book = myMessage.Body as UserOperateAPIRecord; ;
+
+                Console.WriteLine(book);
+
+                Console.WriteLine("ExecTime：{0}\n IPAddres：{1}\n Successd：{2}\n Headers：{3} \n Referrer{4}", book.ExecTime,
+                    book.IPAddres,
+                    book.Successd,
+                    book.Headers,
+                    book.Referrer
+
+                    );
 
             }
             catch (Exception ex)
